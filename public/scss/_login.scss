@@ -1,0 +1,132 @@
+#body.home{
+  font-size: 0;
+  width: 50%;
+  padding: 50px;
+  display: block;
+  margin: 40px auto;
+  color: #fff;
+  box-sizing: border-box;
+  background-color: $dark;
+  border-radius: 3px;
+  section{
+    width: 100%;
+    display: inline-block;
+    @include font-size(14px);
+    vertical-align: top;
+    // background-color: $first;
+    &.register{
+      display:none;
+    }
+    .switch{
+        text-align: center;
+        margin-bottom: 20px;
+      button{
+        background: none;
+        &:first-child{
+          margin-right: 20px;
+        }
+      }
+    }
+    h1{
+      margin-bottom: 20px;
+      @include font-size(20px);
+      text-align: center;
+    }
+    form{
+      &::after{
+        content: "";
+        clear: both;
+        display: block;
+      }
+      label{
+        display: block;
+        @include font-size(16px);
+        input{
+          display: block;
+          width: 100%;
+          margin: 10px 0 20px 0;
+          box-sizing: border-box;
+          color: #fff;
+          background-color: rgba(#fff, 0.4);
+          border: none;
+          border-radius: 3px;
+          padding: 10px 15px;
+          &:focus{
+            outline: none;
+          }
+        }
+        ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+            color:    #eeeeee;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+           color:    #eee;
+           opacity:  1;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+           color:    #eee;
+           opacity:  1;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+           color:    #eee;
+        }
+        :placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+          color:    #eee;
+        }
+      }
+      input[type="submit"]{
+        background: none;
+        border: none;
+        border-bottom: 2px solid #fff;
+        color: #fff;
+        font-weight: 700;
+        @include font-size(16px);
+        padding: 10px 20px;
+        float:right;
+        cursor: pointer;
+      }
+      figure{
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid rgba(#fff, 0.2);
+        width: 100px;
+        margin: 0 auto;
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+      div{
+        position: relative;
+        margin: 20px 0;
+        cursor: pointer;
+        // width: 70%;
+        input[type="file"]{
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          width: 100%;
+          height: 100%;
+          box-sizing: border-box;
+          opacity: 0;
+          padding: 10px 45px;
+          cursor: pointer;
+          @include font-size(16px);
+        }
+        label{
+          display: block;
+          padding: 14px 45px;
+          border-bottom: 2px solid #fff;
+          color: #fff;
+          width: 100%;
+          box-sizing: border-box;
+          font-weight: 700;
+          @include font-size(16px);
+          cursor: pointer;
+          text-align: center;
+        }
+        ::-webkit-file-upload-button { cursor:pointer; }
+      }
+    }
+  }
+}

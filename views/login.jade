@@ -1,0 +1,30 @@
+div(id="body", class="home")
+  section(class="login")
+    h1 Login
+    div.switch
+      button(class="btn active") Login
+      button(class="btn") Register
+    form(id="login", action="/login", method="post")
+      label Username
+        input(type="text", name="username_log", placeholder="Username")
+      label Password
+        input(type="password", name="password_log", placeholder="Password")
+      input(type="submit", value="Login")
+  section.register
+    h1 Register
+    .switch
+      button.btn Login
+      button.btn.active Register
+    form(id="register", action="/", method="post", enctype='multipart/form-data')
+      div
+        figure
+          img(src="img/profile.jpg", alt="profile picture")
+        input(type="file", name="profile", value="Upload your profile picture")
+        label Upload your profile picture
+      label Username
+        input(type="text", name="username", placeholder="Username")
+      label Password
+        input(type="password", name="password", placeholder="Password")
+      label Password again
+        input(type="password", name="password_again", placeholder="Password again")
+      input(type="submit", value="Register")

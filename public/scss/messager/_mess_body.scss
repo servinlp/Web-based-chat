@@ -1,0 +1,103 @@
+#body{
+  main{
+    > section{
+      // height: 100%;
+      height: calc(100vh - 248px);
+      width: 100%;
+      overflow-y: scroll;
+      @include bp-large {
+        height: calc(90vh - 248px);
+      }
+      ul{
+        li{
+          &::after{
+            content:"";
+            display: block;
+            clear: both;
+          }
+          h5{
+            @include transition(all, 0.3s ease);
+            color: transparent !important;
+          }
+          &:hover{
+            h5{
+              color: $darktext !important;
+            }
+          }
+        }
+        li:first-child{
+          margin-top: 20px;
+        }
+        li.empty{
+          display: block;
+          box-sizing: border-box;
+          @include font-size(14px);
+          padding: 10px 40px;
+          margin: 20px;
+          color: #fff;
+          background-color: $blue;
+        }
+        li.recieved{
+          box-sizing: border-box;
+          padding: 0 40px 20px 20px;
+          h5{
+            color: $darktext;
+            @include font-size(12px);
+            text-align: left;
+            margin-bottom: 15px;
+            span{
+              font-weight: 700;
+              float: left;
+              color: $dark;
+              margin-right: 10px;
+            }
+          }
+          article{
+            background-color: $green;
+            box-sizing: border-box;
+            padding: 20px;
+            display: inline-block;
+            max-width: 90%;
+            width: auto;
+            line-height: 22px;
+            float: left;
+            p{
+              color: #fff;
+              @include font-size(14px);
+            }
+          }
+        }
+        li.send{
+          box-sizing: border-box;
+          padding: 0 40px 20px 20px;
+          h5{
+            color: $darktext;
+            @include font-size(12px);
+            text-align: right;
+            margin-bottom: 15px;
+            span{
+              font-weight: 700;
+              float: right;
+              color: $dark;
+              margin-left: 10px;
+            }
+          }
+          article{
+            background-color: $blue;
+            box-sizing: border-box;
+            padding: 20px;
+            display: inline-block;
+            max-width: 90%;
+            width: auto;
+            line-height: 22px;
+            float: right;
+            p{
+              color: #fff;
+              @include font-size(14px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

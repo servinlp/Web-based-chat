@@ -1,0 +1,22 @@
+
+@import "scss/_reset";
+
+@import "scss/_variable";
+@import "scss/_mixin";
+
+@import "scss/_base";
+
+@import "scss/_login";
+
+@import "scss/_header";
+@import "scss/_content";
+
+@import "scss/_sidebar";
+
+// MESSAGER
+@import "scss/messager/_mess_head";
+@import "scss/messager/_mess_body";
+@import "scss/messager/_mess_footer";
+@import "scss/messager/_mess_personal_aside";
+
+@import "scss/_footer";

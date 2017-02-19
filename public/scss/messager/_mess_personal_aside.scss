@@ -1,0 +1,110 @@
+#body{
+  // aside.me:not(.login),
+  aside.me{
+    float:right;
+    width: 50px;
+    height: 34px;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    margin-top: 11px;
+    span{
+      height: 6px;
+      width: 6px;
+      border-radius: 50%;
+      background-color: $darktext;
+      display: block;
+      margin: 4px auto;
+    }
+  }
+  // > section{
+  > section:not(.login):not(.register){
+    position:absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    background-color: $broken;
+    box-sizing: border-box;
+    // padding: 20px;
+    border-left: 2px solid #fff;
+    @include translate(100%, 0);
+    @include transition(all 0.3s ease);
+    &.open{
+      @include translate(0%, 0);
+    }
+    header{
+      box-sizing: border-box;
+      padding: 20px 30px;
+      border-bottom: 2px solid #fff;
+      min-height: 98px;
+      img{
+        height: 23px;
+        width: auto;
+        display: inline-block;
+        padding: 15px;
+        cursor: pointer;
+        vertical-align: top;
+      }
+      h3{
+        display: inline-block;
+        @include font-size(18px);
+        vertical-align: top;
+        line-height: 56px;
+      }
+    }
+    figure{
+      border-radius: 50%;
+      border: 5px solid $green;
+      overflow: hidden;
+      margin: 30px;
+      cursor: pointer;
+      position: relative;
+      &::before{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba($dark, 0);
+        @include transition(all 0.4s ease);
+      }
+      &::after{
+        content: "";
+        background-image: url("img/picture-white.svg");
+        background-repeat: no-repeat;
+        width: 50px;
+        height: 38px;
+        @include font-size(20px);
+        display: block;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        @include translate(-50%, 0);
+        @include transition(all 0.4s ease);
+      }
+      &:hover{
+        &::before{
+          background-color: rgba($dark, 0.4);
+        }
+        &::after{
+          opacity: 1;
+          @include translate(-50%, -50%);
+        }
+      }
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+    h2{
+      font-weight: 700;
+      text-align: center;
+      @include font-size(20px);
+    }
+  }
+}

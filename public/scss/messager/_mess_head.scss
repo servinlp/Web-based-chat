@@ -1,0 +1,46 @@
+#body{
+  main{
+    width: 70%;
+    height: 100%;
+    display: inline-block;
+    background-color: $broken;
+    header{
+      width: 100%;
+      box-sizing: border-box;
+      padding: 20px 30px;
+      border-bottom: 2px solid #fff;
+      > *{
+        vertical-align: top;
+      }
+      figure{
+        border-radius: 50%;
+        width: 50px;
+        overflow: hidden;
+        border: 3px solid $red;
+        display: inline-block;
+        &.online{
+          border: 3px solid $green;
+        }
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+      section{
+        display: inline-block;
+        margin: 8px 0 0 20px;
+        h1{
+          color: $dark;
+          font-weight: 700;
+          margin-bottom: 5px;
+          @include font-size(20px);
+        }
+        p{
+          color: $darktext;
+          font-weight: 700;
+          @include font-size(12px);
+        }
+      }
+    }
+  }
+}

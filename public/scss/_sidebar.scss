@@ -1,0 +1,78 @@
+#body{
+  > *{
+    vertical-align: top;
+  }
+  aside{
+    width: 30%;
+    height: 100%;
+    background-color: $dark;
+    display: inline-block;
+    padding: 20px 0;
+    box-sizing: border-box;
+    header{
+      position: relative;
+      margin: 0 20px 30px 20px;
+      input{
+        width: 100%;
+        // background-color: rgba(#ffffff, 0.4);
+        background-color: #696c75;
+        box-sizing: border-box;
+        padding: 10px 15px;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        &:focus{
+          outline: none;
+        }
+      }
+      img{
+        position: absolute;
+        right: 10px;
+        top: 6px;
+        width: 23px;
+        height: auto;
+      }
+    }
+    .contact{
+      @include font-size(14px);
+      cursor: pointer;
+      padding: 10px 20px;
+      @include transition(all 0.1s ease);
+      > *{
+        vertical-align: top;
+      }
+      &:hover, .active{
+        background-color: #696c75;
+      }
+      figure{
+        border-radius: 50%;
+        width: 50px;
+        overflow: hidden;
+        border: 3px solid $red;
+        display: inline-block;
+        &.online{
+          border: 3px solid $green;
+        }
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+      section{
+        display: inline-block;
+        margin: 7px 0 0 10px;
+        h2{
+          @include font-size(16px);
+          color: #fff;
+          margin-bottom: 10px;
+        }
+        p{
+          position: relative;
+          color: $darktext;
+          font-weight: 700;
+          @include font-size(12px);
+        }
+      }
+    }
+  }
+}

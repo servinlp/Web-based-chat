@@ -1,0 +1,58 @@
+div(id="body")
+  aside
+    header
+      input(type="text", name="name", placeholder="search")
+      img(src="img/search.svg")
+    each user in users
+      div(class="contact", data-UUID="#{user.UUID}")
+        if user.status == 1
+          figure.online
+            img(src="/profile-pics/#{user.profile_picture}")
+        else 
+          figure
+            img(src="/profile-pics/#{user.profile_picture}")
+        section
+          h2 #{user.username}
+          if user.status == 1
+            p Online
+          else 
+            p Offline
+  main 
+    div.overlay
+    h1 #{UUID}
+    header
+      figure
+        img(src="img/profile.jpg")
+      section
+        h1 John doe
+        p Offline
+      aside.me
+        span
+        span
+        span
+    section
+      ul
+        //- li.recieved
+        //-   h5
+        //-     span John
+        //-     | 9.18, Today
+        //-   article
+        //-     p Are we meeting today? Are we meeting today? Are we meeting today? Are we meeting today? Are we meeting today?
+        //- li.send
+        //-   h5
+        //-     span #{name}
+        //-     | 9.19, Today
+        //-   article
+        //-     p Are we meeting today? Are we meeting today? Are we meeting today? Are we meeting today? Are we meeting today?
+    footer
+      form(action="", class="messageSubmit", method="post")
+        textarea(name="message", placeholder="Type your message")
+        input(type="submit" name="name" value="Send")
+  section
+    header
+      img(src="img/back2.svg")
+      h3 Profiel
+    figure
+      img(src="img/profile.jpg")
+    h2(data-uuid="#{UUID}") #{name}
+    button.btn.logout Logout

@@ -1,0 +1,55 @@
+#body{
+  main{
+    footer{
+      border-top: 2px solid #fff;
+      box-sizing: border-box;
+      padding:20px;
+      &::after{
+        content:"";
+        display: block;
+        clear:both;
+      }
+      form{
+        textarea{
+          display: block;
+          width: 100%;
+          box-sizing: border-box;
+          border: none;
+          border-radius: 3px;
+          height: 70px;
+          padding: 10px 20px;
+          &:focus{
+            outline: none;
+          }
+        }
+        input{
+          background: none;
+          border: none;
+          color: $blue;
+          margin-top: 12px;
+          float: right;
+          font-weight: 700;
+          padding-top: 10px;
+          cursor: pointer;
+        }
+        ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+            color:    $placeholdergray;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+           color:    $placeholdergray;
+           opacity:  1;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+           color:    $placeholdergray;
+           opacity:  1;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+           color:    $placeholdergray;
+        }
+        :placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+          color:    $placeholdergray;
+        }
+      }
+    }
+  }
+}

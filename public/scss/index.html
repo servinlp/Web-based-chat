@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div id="body" class="home">
+      <section class="login">
+        <h1>Login</h1>
+        <div class="switch">
+          <button class="btn active">Login</button>
+          <button class="btn">Register</button>
+        </div>
+        <form id="login" action="" method="post">
+          <label>Username <input type="text" name="username_log" value="" placeholder="Username"></label>
+          <label>Password <input type="password" name="password_log" value="" placeholder="Password"></label>
+          <input type="submit" name="name" value="Login">
+        </form>
+      </section>
+      <section class="register">
+        <h1>Register</h1>
+        <div class="switch">
+          <button class="btn">Login</button>
+          <button class="btn active">Register</button>
+        </div>
+        <form id="register-form" action="" method="post">
+          <div>
+            <figure><img src="img/profile.jpg" alt="profile picture" /></figure>
+            <input type="file" name="name" value="Upload your profile picture">
+            <label for="">Upload your profile picture</label>
+          </div>
+          <label>Username <input type="text" name="username" value="" placeholder="Username"></label>
+          <label>Password <input type="password" name="password" value="" placeholder="Password"></label>
+          <label>Password again<input type="password" name="password_again" value="" placeholder="Password again"></label>
+          <input type="submit" name="name" value="Register">
+        </form>
+      </section>
+    </div>
+
+    <!-- <div id="body">
+      <aside>
+        <header>
+          <input type="text" name="name" value="" placeholder="search">
+          <img src="img/search.svg" alt="" />
+        </header>
+        <div class="contact">
+          <figure>
+            <img src="img/profile.jpg" alt="" />
+          </figure>
+          <section>
+            <h2>John doe</h2>
+            <p>Online</p>
+          </section>
+        </div>
+        <div class="contact">
+          <figure class="online">
+            <img src="img/profile.jpg" alt="" />
+          </figure>
+          <section>
+            <h2>John doe</h2>
+            <p>Online</p>
+          </section>
+        </div>
+        <div class="contact">
+          <figure>
+            <img src="img/profile.jpg" alt="" />
+          </figure>
+          <section>
+            <h2>John doe</h2>
+            <p>Online</p>
+          </section>
+        </div>
+      </aside>
+      <main>
+        <header>
+          <figure>
+            <img src="img/profile.jpg" alt="" />
+          </figure>
+          <section>
+            <h1>John doe</h1>
+            <p><span></span>Online</p>
+          </section>
+        </header>
+        <section>
+          <ul>
+            <li class="recieved">
+              <h5><span>John</span> 9.18, Today</h5>
+              <article>
+                <p>Are we meeting today? Are we meeting today? Are we meeting today? Are we meeting today? Are we meeting today?</p>
+              </article>
+            </li>
+
+            <li class="send">
+              <h5><span>Servin</span> 9.19, Today</h5>
+              <article>
+                <p>Are we meeting today? Are we meeting today? Are we meeting today? Are we meeting today? Are we meeting today?</p>
+              </article>
+            </li>
+
+            <li class="recieved">
+              <h5><span>John</span> 9.18, Today</h5>
+              <article>
+                <p>Are we meeting today? Are we meeting today? Are we meeting today? Are we meeting today? Are we meeting today?</p>
+              </article>
+            </li>
+
+            <li class="send">
+              <h5><span>Servin</span> 9.19, Today</h5>
+              <article>
+                <p>Are we meeting today? Are we meeting today? Are we meeting today? Are we meeting today? Are we meeting today?</p>
+              </article>
+            </li>
+          </ul>
+        </section>
+        <footer>
+          <form action="" method="post">
+            <textarea name="message" placeholder="Type your message"></textarea>
+            <input type="submit" name="name" value="Send">
+          </form>
+        </footer>
+      </main>
+    </div> -->
+
+  <script src="jquery-1.11.1.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="scripts.js"></script>
+  <!-- // <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+  <!-- <script src="http://localhost:35729/livereload.js"></script> -->
+  </body>
+</html>

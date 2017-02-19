@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+
+    <form id="test" action="" method="post">
+      <input type="text" name="text1" value="">
+      <input type="text" name="text2" value="">
+      <input type="submit" name="name" value="Submit">
+    </form>
+
+  <script src="jquery-1.11.1.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="scripts.js"></script>
+  <script>
+  var socket = io();
+    $("#test").submit(function() {
+      
+    });
+  </script>
+  <!-- // <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+  <!-- <script src="http://localhost:35729/livereload.js"></script> -->
+  </body>
+</html>
